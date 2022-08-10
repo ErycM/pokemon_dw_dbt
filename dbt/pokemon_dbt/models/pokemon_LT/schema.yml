@@ -1,0 +1,185 @@
+
+version: 2
+
+models:
+  - name: types_by_damage
+    description: "Relationship between types and their quantity data"
+    columns:
+      - name: type
+        description: "Pokemon Types"
+        
+      - name: no_damage_to
+        description: "Types with no damage to count"
+
+      - name: half_damage_to
+        description: "Types with half damage to count"
+
+      - name: double_damage_to
+        description: "Types with double damage to count"
+
+      - name: no_damage_from
+        description: "Types with no damage from count"
+
+      - name: half_damage_from
+        description: "Types with half damage from count"
+
+      - name: double_damage_from
+        description: "Types with double damage from count"
+
+  - name: top_base_status
+    description: "Top Pokemon Base Status"
+    columns:
+      - name: name
+        description: "Pokemon Name"
+        tests:
+          - unique
+          - not_null
+        
+      - name: type1
+        description: "Types with no damage to count"
+        tests:
+          - not_null
+
+      - name: base_experience
+        description: "Types with half damage to count"
+        tests:
+          - not_null
+
+      - name: hp_base_stat
+        description: "Types with double damage to count"
+        tests:
+          - not_null
+
+      - name: attack_base_stat
+        description: "Types with no damage from count"
+        tests:
+          - not_null
+
+      - name: defense_base_stat
+        description: "Types with half damage from count"
+        tests:
+          - not_null
+
+      - name: special_attack_base_stat
+        description: "Types with double damage from count"
+        tests:
+          - not_null
+
+      - name: special_defense_base_stat
+        description: "Types with double damage from count"
+        tests:
+          - not_null
+
+      - name: speed_base_stat
+        description: "Types with double damage from count"
+        tests:
+          - not_null
+      
+      - name: total
+        description: "Types with double damage from count"
+        tests:
+          - not_null
+
+  - name: ranking_pokemons_by_type
+    description: "Top 1 Pokemon by Types"
+    columns:
+      - name: name
+        description: "Pokemon Name"
+        tests:
+          - unique
+          - not_null
+        
+      - name: type1
+        description: "Pokemon Principal Type"
+        tests:
+          - not_null
+
+      - name: base_status_score
+        description: "Score base status based"
+        tests:
+          - not_null
+
+      - name: damage_score
+        description: "Damage Score Based"
+        tests:
+          - not_null
+
+      - name: growth_level_rate
+        description: "Growth Level Rate"
+        tests:
+          - not_null
+
+      - name: count_possible_moves
+        description: "How many moves the pokemon can use"
+        tests:
+          - not_null
+
+      - name: count_abilities
+        description: "How many abilities the pokemon have"
+        tests:
+          - not_null
+
+  - name: most_popular_moves
+    description: "Top 1 Pokemon by Types"
+    columns:
+      - name: move_name
+        description: "Move Name"
+        tests:
+          - unique
+          - not_null
+        
+      - name: type
+        description: "Type"
+        tests:
+          - not_null
+
+      - name: power
+        description: "Power"
+        tests:
+          - not_null
+
+
+  - name: most_popular_moves
+    description: "Most Popular Moves"
+    columns:
+      - name: move_name
+        description: "Move Name"
+        tests:
+          - unique
+          - not_null
+        
+      - name: type
+        description: "Type"
+        tests:
+          - not_null
+
+      - name: power
+        description: "Power"
+        tests:
+          - not_null
+
+  - name: pokemon_type_count
+    description: "Type of pokemon Count"
+    columns:
+      - name: type1
+        description: "Type1"
+        tests:
+          - unique
+          - not_null
+        
+      - name: type1_pokemon_counts
+        description: "type1_pokemon_counts"
+        tests:
+          - not_null
+
+      - name: type2
+        description: "type2"
+        tests:
+          - not_null
+      
+      - name: type2_pokemon_counts
+        description: "type2_pokemon_counts"
+        tests:
+          - not_null
+
+          

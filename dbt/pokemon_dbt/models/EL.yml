@@ -1,0 +1,14 @@
+# EL.yml
+version: 2
+sources:
+  - name: EL
+    schema: EL
+    tables:
+      - name: abilities
+      - name: growth_rates
+      - name: moves
+      - name: pokemon_abilities
+      - name: pokemon_growth_rates
+      - name: pokemon_moves
+      - name: pokemons
+      - name: types
